@@ -36,23 +36,27 @@ fetchInstagramData();
 
 
 // Rolagem suável menu
-
-
 document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
-        e.preventDefault();
+        const href = this.getAttribute('href');
 
-        const targetId = this.getAttribute('href').substring(1); // Remove o "#" da âncora
-        const targetElement = document.getElementById(targetId);
+        // Verifique se o link aponta para uma âncora interna com um ID
+        if (href && href.startsWith('#')) {
+            e.preventDefault();
 
-        if (targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop,
-                behavior: 'smooth'
-            });
+            const targetId = href.substring(1); // Remova o "#" da âncora
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
         }
     });
 });
+
 
 
 
