@@ -12,7 +12,7 @@
   }
 
   .slider_section {
-    padding: 45px 0 75px 0;
+    padding: 45px 0 50px 0;
   }
 
   .custom_nav-container .navbar-nav {
@@ -38,7 +38,7 @@
 
 @media screen and (max-width: 767px) and (orientation: landscape) {
   .slider_section .img-box img {
-    max-width: 60%;
+    max-width: 100%;
   }
 
   .slider_section .detail-box h1 {
@@ -74,7 +74,7 @@
 
 @media (max-width: 480px) {
   .slider_section .detail-box h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .track_section form {
